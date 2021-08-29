@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+:root {
+	--fcolor:#003545; 
+}
+body {
+	animation-name: darkGlow;
+	animation-duration: 120s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	color: var(--fcolor);
+	font-family: 'Langar', cursive;
+}
+
+#title {
+	font-size: 2em;
+}
+
+#heading {
+	display: flex;
+}
+
+#BtnStrip {
+	right: 1%;
+	position:absolute;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+.BtnStripLink {
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	border-width: 1em; 
+	border-color: red;
+	border-bottom-style: double;
+}
+
+@keyframes darkGlow {
+	0% {
+		background: #FFA500;
+	}
+	padding:1%;
+	75% {
+		background: #40E0D0;
+	}
+	100% {
+		background: #FFA500;
+	}
+}
+
+
+hr {
+	border: var(--fcolor) 0.5em;
+	border-top-style:solid; 
+}
+
+.subH {
+	font-size: 1.5em;
+}
+
+.left {
+	position:relative;
+	left:0;
+	width:40vw;
+}
+
+.right {
+	position:relative;
+	right:0;
+	width:40vw;
+}
+
+.center {
+	margin: auto;
+	width: 90%;
+	padding:10px;
+}
+
+.grid-master {
+		display:flex;
+		flex-flow:row wrap;
+		justify-content: space-around;
+		font-size: 3em;
+}
+
+.grid {
+		display:flex;
+		flex-flow:row wrap;
+		justify-content: space-around;
+}
+
+.backdrop {
+		position:absolute;
+		left:0;
+		top:0;
+		height:99vh;
+		width:99vw;
+		z-index: -1;
+		border: solid #ffffff;
+		margin:0;
+}
