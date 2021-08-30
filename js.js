@@ -21,7 +21,6 @@ function refresh() {
 	canvas_s.height = window.innerHeight;
 	c_s = canvas_s.getContext("2d");
 	c_s.strokeStyle = "#ffffff";
-		c_s.moveTo(p.x, p.y);
 	c_s.shadowBlur = 5;
 	c_s.shadowColor = "rgba(25, 50, 255, 255)"
 
@@ -100,6 +99,7 @@ function mouseMove(e) {
 }
 
 function changeGrid() {
+	c_s.beginPath();
 	let index = Math.round(Math.sqrt(grid.length));
 	for (var i = 0; i < grid.length; i++) {
 	grid[i].x += (Math.random()*-0.5)*30;
