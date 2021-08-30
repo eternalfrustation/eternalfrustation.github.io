@@ -14,7 +14,6 @@ function onLoad() {
 		grid.push({x:0, y:0});
 	}
 	refresh();
-	window.setInterval(changeGrid(), 10)
 }
 
 function refresh() {
@@ -22,6 +21,7 @@ function refresh() {
 	canvas_s.height = window.innerHeight;
 	c_s = canvas_s.getContext("2d");
 	c_s.strokeStyle = "#ffffff";
+		c_s.moveTo(p.x, p.y);
 	c_s.shadowBlur = 5;
 	c_s.shadowColor = "rgba(25, 50, 255, 255)"
 
@@ -38,7 +38,7 @@ function refresh() {
 			grid[i*index+j].y = j*canvas_s.height/(index-1);
 		}
 	}
-	genBg();
+	changeGrid();
 	draw(mouseX, mouseY);
 }
 
@@ -48,18 +48,22 @@ function genBg() {
 	for (i = 0; i < grid.length; i++) {
 		const p = grid[i];
 		var b, l;
-		if (i+index < grid.length) {
-			b = grid[i+index];
+		if (i+1 < grid.length) {
+			b = grid[i+1];
 		} else {
-			b = {x: p.x+canvas_s.width/index, y: p.y};
+			b = {x: p.x, y: p.y+canvas_s.height/index};
 		}
-		if (i + 1 < grid.length) {
-			l = grid[i+1];
+		if (i + index < grid.length) {
+			l = grid[i+index];
 		} else {
-			l = {x: p.x, y: p.y+canvas_s.height/index};
+			l = {x: p.x+canvas_s.width/index, y: p.y};
+		}
+		if (i%index == 19) {
+			continue;
 		}
 		c_s.moveTo(p.x, p.y);
 		c_s.lineTo(b.x, b.y);
+		c_s.moveTo(p.x, p.y);
 		c_s.lineTo(l.x, l.y);
 	}
 	c_s.stroke();
@@ -97,8 +101,10 @@ function mouseMove(e) {
 
 function changeGrid() {
 	let index = Math.round(Math.sqrt(grid.length));
-	grid[Math.floor(Math.random()*grid.length)].x += (Math.random()*-0.5)*30;
-	grid[Math.floor(Math.random()*grid.length)].y += (Math.random()*-0.5)*30;
+	for (var i = 0; i < grid.length; i++) {
+	grid[i].x += (Math.random()*-0.5)*30;
+	grid[i].y += (Math.random()*-0.5)*30;
+	}
 	c_s.clearRect(0, 0, canvas_s.width, canvas_s.height);
 	genBg();
 }
