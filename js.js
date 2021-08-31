@@ -10,7 +10,7 @@ function onLoad() {
 	for (i = 0; i < 8; i++) {
 		points.push({x: 0, y: 0});
 	}
-	for (i = 0; i < 400; i++) {
+	for (i = 0; i < 625; i++) {
 		grid.push({x:0, y:0});
 	}
 	refresh();
@@ -33,7 +33,7 @@ function refresh() {
 	let index = Math.round(Math.sqrt(grid.length));
 	for (i = 0; i < index; i++) {
 		for (j = 0; j < index; j++) {
-			grid[i*index+j].x = i*canvas_s.width/index;
+			grid[i*index+j].x = i*canvas_s.width/(index-1);
 			grid[i*index+j].y = j*canvas_s.height/(index-1);
 		}
 	}
@@ -57,7 +57,7 @@ function genBg() {
 		} else {
 			l = {x: p.x+canvas_s.width/index, y: p.y};
 		}
-		if (i%index == 19) {
+		if (i%index == index-1) {
 			continue;
 		}
 		c_s.moveTo(p.x, p.y);
@@ -102,6 +102,9 @@ function changeGrid() {
 	c_s.beginPath();
 	let index = Math.round(Math.sqrt(grid.length));
 	for (var i = 0; i < grid.length; i++) {
+		if (i%index == 0 || i < index || i > grid.length - index || i % index == index-1) {
+			continue;
+		}
 	grid[i].x += (Math.random()*-0.5)*30;
 	grid[i].y += (Math.random()*-0.5)*30;
 	}

@@ -84,25 +84,48 @@ hr {
 }
 
 .grid-master {
-		display:flex;
-		flex-flow:row wrap;
-		justify-content: space-around;
-		font-size: 3em;
+	display:grid;
+	grid-template-columns: auto auto auto auto;
 }
-
 .grid {
-		display:flex;
-		flex-flow:row wrap;
-		justify-content: space-around;
+		position: relative;
+}
+.grid > spam {
+		position: absolute;
+		bottom: 8px;
+		left: 50%;
+		transform: translateX(-50%);
 }
 
 .backdrop {
-		position:absolute;
-		left:0;
-		top:0;
-		height:99vh;
-		width:99vw;
-		z-index: -1;
-		border: solid #ffffff;
-		margin:0;
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	z-index: -1;
+	margin:0;
+}
+
+rect.wire {
+		fill:gold;
+}
+
+path.outline {
+		fill:#ae3100;
+		transition:ease-in-out fill 0.5s;
+}
+
+path.path-center {
+		fill: #443333;
+
+		transition:ease-in-out fill 1s;
+}
+
+svg:hover path.path-center {
+		fill: #66fff1;
+}
+
+svg:hover path.outline {
+		fill: #24adff;
 }
