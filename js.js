@@ -72,7 +72,6 @@ function genBg() {
 function draw(mx, my) {
 	for (const p of points) {
 		c_d.beginPath();
-		c_d.strokeStyle = "rgba(255, 255, 255, ${dist({x:mouseX, y: mouseY}, p)*255/60})";
 		c_d.moveTo(p.x, p.y);
 		c_d.lineTo(mx, my);
 		c_d.stroke();
@@ -96,6 +95,7 @@ function mouseMove(e) {
 		}
 	}
 	c_d.clearRect(0, 0, canvas_d.width, canvas_d.height);
+	c_d.strokeOpacity = dist({x:mouseX, y: mouseY}, p)*255/60;
 	draw(mouseX, mouseY);
 }
 
