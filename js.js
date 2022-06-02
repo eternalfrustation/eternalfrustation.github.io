@@ -34,8 +34,8 @@ function refresh() {
 	c_d.shadowColor = "rgba(25, 50, 255, 255)";
 	for (i = 0; i < bgGridWidth; i++) {
 		for (j = 0; j < bgGridHeight; j++) {
-			grid[i * bgGridHeight + j].x = (i * canvas_s.width) / (index - 1);
-			grid[i * bgGridHeight + j].y = (j * canvas_s.height) / (index - 1);
+			grid[i * bgGridHeight + j].x = (i * canvas_s.width) / (bgGridWidth - 1);
+			grid[i * bgGridHeight + j].y = (j * canvas_s.height) / (bgGridHeight - 1);
 		}
 	}
 	changeGrid();
