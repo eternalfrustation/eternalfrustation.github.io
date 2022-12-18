@@ -1,0 +1,16 @@
+
+.profile img,
+h1,
+span,
+svg,
+.button,
+.post-entry,
+h2,
+p,
+blockquote
+{
+	filter: blur(10px);
+	transition: opacity 0.8s, transform 0.8s, filter 0.8s;
+	transform: translateY(10rem);
+	opacity: 0;
+}

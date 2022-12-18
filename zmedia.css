@@ -1,0 +1,13 @@
+.profile img,
+h1,
+span,
+svg,
+.button,
+.post-entry,
+h2,
+p,
+blockquote
+{
+	transition: opacity 0.5s;
+	opacity: 0;
+}
