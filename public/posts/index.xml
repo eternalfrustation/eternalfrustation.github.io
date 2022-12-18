@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on EternalFrustAtion</title>
+    <link>https://eternalfrustation.github.io/posts/</link>
+    <description>Recent content in Posts on EternalFrustAtion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 17 Dec 2022 18:06:39 +0530</lastBuildDate><atom:link href="https://eternalfrustation.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making This Website</title>
+      <link>https://eternalfrustation.github.io/posts/making-this-website/</link>
+      <pubDate>Sat, 17 Dec 2022 18:06:39 +0530</pubDate>
+      
+      <guid>https://eternalfrustation.github.io/posts/making-this-website/</guid>
+      <description>New Website, Yay? So, I have made a new website and uploaded it to github and i am going to be using this as a general platfrom to keep myself a little organised.
+Now, to fill this empty space beneath this text, lets walk through how i went about creating this beautiful masterpiece that is definitely not made using a template
+The previous website As you may have noticed, there was a website on this domain before this one.</description>
+    </item>
+    
+  </channel>
+</rss>
