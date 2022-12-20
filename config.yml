@@ -1,4 +1,5 @@
 baseURL: "https://eternalfrustation.github.io"
+# baseURL: "127.0.0.1:1313"
 title: EternalFrustAtion
 paginate: 5
 theme: PaperMod
