@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eternalfrustation.github.io/posts/adding-some-animations/</loc>
-    <lastmod>2022-12-18T18:36:18+05:30</lastmod>
-  </url><url>
     <loc>https://eternalfrustation.github.io/</loc>
-    <lastmod>2022-12-18T18:36:18+05:30</lastmod>
+    <lastmod>2022-12-19T18:17:46+05:30</lastmod>
+  </url><url>
+    <loc>https://eternalfrustation.github.io/posts/exams-and-diary/</loc>
+    <lastmod>2022-12-19T18:17:46+05:30</lastmod>
   </url><url>
     <loc>https://eternalfrustation.github.io/posts/</loc>
+    <lastmod>2022-12-19T18:17:46+05:30</lastmod>
+  </url><url>
+    <loc>https://eternalfrustation.github.io/posts/adding-some-animations/</loc>
     <lastmod>2022-12-18T18:36:18+05:30</lastmod>
   </url><url>
     <loc>https://eternalfrustation.github.io/posts/making-this-website/</loc>
