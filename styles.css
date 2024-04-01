@@ -1,0 +1,208 @@
+:root {
+	--bg-square-width: 10px;
+	--bg-square-inner-color: #8BE9FD;
+	--bg-square-edge-color: #85E2F6;
+}
+
+@font-face {
+	font-family: xProto;
+	src: url("0xProto.woff2")
+}
+
+.dark {
+	--bg-square-inner-color: #282A36;
+	--bg-square-edge-color: #2d2f3b;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	white-space: nowrap;
+	font-family: xProto;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	padding: 15px;
+	grid-gap: 20px;
+	background-color: var(--bg-square-inner-color);
+	background-image: linear-gradient(90deg, var(--bg-square-edge-color) 49%, var(--bg-square-edge-color) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%), linear-gradient(0, var(--bg-square-edge-color) 49%, var(--bg-square-edge-color) 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%), radial-gradient(circle, rgba(0, 0, 0, 0) 50%, var(--bg-square-edge-color) 100%);
+	background-size: var(--bg-square-width), var(--bg-square-width) var(--bg-square-width), 100%;
+	display: grid;
+	animation: backgroundMove 240s infinite;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto;
+}
+
+#position {
+	font-size: 1.5em;
+}
+
+#profileInfo_links>a {
+	display: flex;
+	flex-flow: column;
+	font-size: 1.5em;
+	padding-top: 10px;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+li {
+	font-size: 1.5em;
+}
+
+@keyframes backgroundMove {
+	from {
+		background-position: 0% 100%, 100% 0%, 0% 0%
+	}
+
+	to {
+		background-position: 100% 0%, 0% 100%, 0% 0%
+	}
+}
+
+#profileInfo {
+	display: flex;
+	flex-direction: column;
+}
+
+#profileInfo_name {
+	font-size: 2em;
+}
+
+li:first-of-type::marker {
+	content: "┏━━";
+}
+
+li::marker {
+	content: "┣━━"
+}
+
+li:last-of-type::marker {
+	content: "┗━━";
+}
+
+li:only-of-type::marker {
+	content: "Ͼ ";
+}
+
+.ncul>li::marker {
+	content: "Ͼ ";
+}
+
+ul {
+	line-height: 1.2;
+}
+
+body>div {
+	background-color: transparent;
+	border-radius: 10px;
+	padding: 10px;
+	background: radial-gradient(circle, var(--bg-square-edge-color) 0%,
+			var(--bg-square-edge-color) 25%,
+			transparent 100%);
+	transition: background-color 0.7s, transform 0.1s;
+}
+
+body>div:hover {
+	background-color: var(--bg-square-inner-color);
+}
+
+#profilePhoto {
+	overflow: hidden;
+	align-items: center;
+	background: url("profile.jpg");
+	background-size: cover;
+	background-position: center;
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	min-height: 300px;
+}
+
+
+@media screen and (max-width: 600px) {
+	body {
+		grid-template-columns: auto;
+	}
+
+	#profileInfo_links {
+		font-size: 0.8em;
+	}
+
+	* {
+
+		white-space: initial;
+	}
+
+	li::marker {
+		content: ""
+	}
+
+	li:first-of-type::marker {
+		content: ""
+	}
+
+	li:last-of-type::marker {
+		content: "";
+	}
+
+	ul {
+		padding: 0;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	#profileInfo_links {
+		font-size: 0.8em;
+	}
+
+	body {
+		grid-template-columns: auto;
+	}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+	#profileInfo_links {
+		font-size: 0.8em;
+	}
+
+	body {
+		grid-template-columns: auto;
+	}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+	body {
+		grid-template-columns: auto;
+	}
+	
+	:root {
+		font-size: 0.8em;
+	}
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+	#profileInfo_links {
+		font-size: initial;
+	}
+	body {
+		grid-template-columns: auto auto;
+	}
+	
+}
+
+
