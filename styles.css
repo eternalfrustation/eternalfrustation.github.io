@@ -104,11 +104,12 @@ body>div {
 	background: radial-gradient(circle, var(--bg-square-edge-color) 0%,
 			var(--bg-square-edge-color) 25%,
 			transparent 100%);
-	transition: background-color 0.7s, transform 0.1s;
+	transition: background-color 0.7s, transform 0.1s, box-shadow 0.3s;
 }
 
 body>div:hover {
 	background-color: var(--bg-square-inner-color);
+	box-shadow: rgba(0, 0, 0, 0.1) 11px 10px 6px -3px;
 }
 
 #profilePhoto {
