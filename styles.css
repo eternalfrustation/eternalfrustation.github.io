@@ -2,6 +2,9 @@
 	--bg-square-width: 10px;
 	--bg-square-inner-color: #8BE9FD;
 	--bg-square-edge-color: #85E2F6;
+	--bg-complementary: #DEAEC2;
+	--text-color: #18272F;
+	color: var(--text-color);
 }
 
 @font-face {
@@ -9,10 +12,7 @@
 	src: url("0xProto.woff2")
 }
 
-.dark {
-	--bg-square-inner-color: #282A36;
-	--bg-square-edge-color: #2d2f3b;
-}
+
 
 * {
 	box-sizing: border-box;
@@ -36,8 +36,35 @@ body {
 	grid-template-rows: auto auto;
 }
 
-#position {
-	font-size: 1.5em;
+a {
+	text-decoration: none;
+	color: var(--text-color);
+	font-weight: 700;
+	position: relative;
+	transition: color 0.5s;
+	padding: 10px;
+}
+
+a::before {
+	content: '';
+	background-color: var(--bg-complementary);
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 100%;
+	height: 8px;
+	z-index: -1;
+	transition: all .3s ease-in-out;
+}
+
+a:hover {
+	color: var(--bg-square-inner-color);
+}
+
+a:hover::before {
+	bottom: 0;
+	height: 100%;
+	border-radius: 10px;
 }
 
 #profileInfo_links>a {
@@ -53,6 +80,31 @@ h3 {
 
 li {
 	font-size: 1.5em;
+	position: relative;
+	transition: color 0.5s;
+	padding: 5px;
+}
+
+li::before {
+	content: "";
+	background-color: var(--bg-complementary);
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 0px;
+	height: 100%;
+	z-index: -1;
+	transition: all .3s ease-in-out;
+}
+
+li:hover {
+	color: var(--bg-square-inner-color);
+}
+
+li:hover::before {
+	bottom: 0;
+	width: 100%;
+	border-radius: 10px;
 }
 
 @keyframes backgroundMove {
@@ -104,7 +156,9 @@ body>div {
 	padding: 10px;
 	background: radial-gradient(circle, var(--bg-square-edge-color) 0%,
 			var(--bg-square-edge-color) 25%,
-			transparent 100%);
+			transparent 100%),
+
+	;
 	transition: background-color 0.7s, transform 0.1s, box-shadow 0.3s;
 }
 
@@ -168,7 +222,6 @@ body>div:hover {
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
 
 	#profileInfo_links {
@@ -181,13 +234,12 @@ body>div:hover {
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
 
 	body {
 		grid-template-columns: auto;
 	}
-	
+
 	:root {
 		font-size: 0.8em;
 	}
@@ -195,16 +247,24 @@ body>div:hover {
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
 
 	#profileInfo_links {
 		font-size: initial;
 	}
+
 	body {
 		grid-template-columns: auto;
+
 	}
-	
+
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-square-inner-color: #282A36;
+		--bg-square-edge-color: #2d2f3b;
+		--text-color: #F8F8F2;
+	}
 
+}
