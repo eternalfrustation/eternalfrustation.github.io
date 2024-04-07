@@ -155,7 +155,9 @@ body>div {
 	border-radius: 10px;
 	padding: 10px;
 	width: 95%;
-	overflow: auto;
+	overflow: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: var(--bg-complementary);
 	background: radial-gradient(circle, var(--bg-square-edge-color) 0%,
 			var(--bg-square-edge-color) 25%,
 			transparent 100%),
