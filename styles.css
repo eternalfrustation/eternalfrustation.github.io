@@ -127,15 +127,15 @@ li:hover::before {
 }
 
 li:first-of-type::marker {
-	content: "┏━━";
+	content: "╔══";
 }
 
 li::marker {
-	content: "┣━━"
+	content: "╠══"
 }
 
 li:last-of-type::marker {
-	content: "┗━━";
+	content: "╚══";
 }
 
 li:only-of-type::marker {
