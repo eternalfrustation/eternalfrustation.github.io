@@ -2,7 +2,7 @@
 	--bg-square-width: 10px;
 	--bg-square-inner-color: #8BE9FD;
 	--bg-square-edge-color: #85E2F6;
-	--bg-complementary: #DEAEC2;
+	--bg-complementary: #8c0148;
 	--text-color: #18272F;
 	color: var(--text-color);
 }
@@ -23,8 +23,7 @@
 
 body {
 	background-attachment: fixed;
-	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	grid-gap: 20px;
 	padding: 10px;
 	background-color: var(--bg-square-inner-color);
@@ -294,6 +293,7 @@ body>div:hover::after {
 	:root {
 		--bg-square-inner-color: #282A36;
 		--bg-square-edge-color: #2d2f3b;
+		--bg-complementary: #DEAEC2;
 		--text-color: #F8F8F2;
 	}
 
