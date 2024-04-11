@@ -76,6 +76,7 @@ a:hover::before {
 
 h3 {
 	font-size: 2em;
+	text-decoration: underline;
 }
 
 li {
