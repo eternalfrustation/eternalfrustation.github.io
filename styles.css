@@ -45,7 +45,7 @@ a {
 	padding: 10px;
 }
 
-a::before {
+#profileInfo_links > a::before {
 	content: '';
 	background-color: var(--bg-complementary);
 	position: absolute;
@@ -61,7 +61,7 @@ a:hover {
 	color: var(--bg-square-inner-color);
 }
 
-a:hover::before {
+#profileInfo_links > a:hover::before {
 	bottom: 0;
 	height: 100%;
 	border-radius: 10px;
