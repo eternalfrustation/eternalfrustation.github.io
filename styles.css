@@ -130,6 +130,9 @@ li:first-of-type::marker {
 	content: "╔══";
 }
 
+li:hover::marker {
+	color: var(--bg-complementary);
+}
 li::marker {
 	content: "╠══"
 }
