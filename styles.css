@@ -79,7 +79,7 @@ h2 {
 }
 
 li {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	position: relative;
 	transition: color 0.5s;
 	padding: 5px;
@@ -156,6 +156,9 @@ ul {
 body>div {
 	background-color: transparent;
 	border-radius: 10px;
+	border-width: 2px;
+	border-color: white;
+	border-style: solid;
 	padding: 10px;
 	width: 95%;
 	background: radial-gradient(circle, var(--bg-square-edge-color) 0%,
