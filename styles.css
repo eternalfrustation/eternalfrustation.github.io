@@ -9,7 +9,8 @@
 
 @font-face {
 	font-family: xProto;
-	src: url("0xProto.woff2")
+	font-display: optional;
+	src: url("/0xproto-webfont.woff2")
 }
 
 
@@ -207,7 +208,7 @@ body>div:hover::after {
 #profilePhoto {
 	overflow: hidden;
 	align-items: center;
-	background: url("profile.jpg");
+	background: url("profile.avif");
 	background-size: cover;
 	background-position: center;
 	grid-column: 1;
