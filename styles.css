@@ -3,6 +3,7 @@
 	--bg-square-inner-color: #8BE9FD;
 	--bg-square-edge-color: #85E2F6;
 	--bg-complementary: #8c0148;
+	--bg-complementary-light: #50fa7b;
 	--text-color: #18272F;
 	color: var(--text-color);
 }
@@ -135,7 +136,8 @@ li:hover::marker {
 	color: var(--bg-complementary);
 }
 li::marker {
-	content: "╠══"
+	content: "╠══";
+	transform: scale(150%);
 }
 
 li:last-of-type::marker {
@@ -304,4 +306,40 @@ body>div:hover::after {
 		--text-color: #F8F8F2;
 	}
 
+}
+
+button {
+	background-color: var(--bg-complementary);
+	border-radius: 40px;
+	font-size: 2em;
+	padding: 10px;
+	border-width: 0;
+	box-shadow: 0px 0px 3px 3px gray;
+	transition: background-color 0.5s;
+	cursor: pointer;
+}
+
+.floating-element {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10;
+}
+
+button::before {
+	content: "";
+	background-color: var(--bg-complementary-light);
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 0px;
+	height: 100%;
+	z-index: -1;
+	transition: all .3s ease-in-out;
+}
+
+button:hover::before {
+	bottom: 0;
+	width: 100%;
+	border-radius: 40px;
 }

@@ -7,11 +7,10 @@
 	<link href="styles.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preload" as="font" href="/0xproto-webfont.woff2" crossorigin>
-	<script src="scripts.js">
-	</script>
 </head>
 
 <body>
+	<a class="floating-element" href="https://eternalfrustation.github.io/apocrypha/"><button>Apocrypha</button></a>
 	<div role="img" aria-label="Profile Photo" id="profilePhoto"></div>
 	<div id="profileInfo">
 		<h1>Sandeep Kumar</h1>
@@ -169,5 +168,23 @@
 		</ul>
 	</div>
 </body>
+
+<script>
+
+	window.addEventListener("load", () => {
+		const cards = document.querySelectorAll("body > div");
+		for (const card of cards) {
+			card.addEventListener("mouseenter", (e) => {
+				const boundingBox = card.getBoundingClientRect();
+				const mrx = (e.x - boundingBox.x) / boundingBox.width;
+				const mry = (e.y - boundingBox.y) / boundingBox.height;
+				card.style.transform = `skew(${mrx}deg, ${mry}deg)`
+			}, true)
+			card.addEventListener("mouseleave", (e) => {
+				card.style.transform = ``;
+			})
+		}
+	})
+</script>
 
 </html>
