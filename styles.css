@@ -156,7 +156,7 @@ ul {
 	line-height: 1.2;
 }
 
-body>div {
+body>section {
 	background-color: transparent;
 	border-radius: 10px;
 	border-width: 2px;
@@ -170,13 +170,13 @@ body>div {
 	transition: background-color 0.7s, transform 0.1s, box-shadow 0.3s;
 }
 
-body>div:hover {
+body>section:hover {
 	background-color: var(--bg-square-inner-color);
 	box-shadow: rgba(0, 0, 0, 0.1) 11px 10px 6px -3px;
 }
 
-body>div::before,
-body>div::after {
+body>section::before,
+body>section::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -187,22 +187,22 @@ body>div::after {
 	transition: transform 0.5s ease;
 }
 
-body>div::before {
+body>section::before {
 	left: -8px;
 	transform-origin: center top;
 }
 
-body>div:hover::before {
+body>section:hover::before {
 	transform-origin: center bottom;
 	transform: scaleY(1);
 }
 
-body>div::after {
+body>section::after {
 	right: -8px;
 	transform-origin: center bottom;
 }
 
-body>div:hover::after {
+body>section:hover::after {
 	transform-origin: center top;
 	transform: scaleY(1);
 }
